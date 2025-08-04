@@ -1,0 +1,14 @@
+read_verilog ../src/mux_2_1.v
+read_verilog ../src/encoder.v
+read_verilog ../src/decoder.v
+read_verilog ../src/combo.v
+
+hierarchy -check -top combo
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+dfflibmap -liberty /home/nielit/Desktop/vsdflow/library/osu018_stdcells.lib
+abc -liberty /home/nielit/Desktop/vsdflow/library/osu018_stdcells.lib
+clean
+select combo
+show
+write_verilog combo_synth.v
