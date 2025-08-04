@@ -122,7 +122,8 @@ waveform.png: snapshot image of waveform view
 
 
 > Sample Waveform
-![Waveform](waveform/combo_waveform.png)
+
+![Waveform](Waveform/combo_waveform.png)
 ---
 
 📌 Requirements
